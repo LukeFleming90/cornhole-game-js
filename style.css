@@ -442,12 +442,12 @@ span::after {
 	display:flex;
 }
 
-.main {
+/* .main {
 	flex:3;
 	display:flex;
 	border: solid orange 5px;
 	flex-direction:column;
-}
+} */
 
 /* .main > .flex-child {
 	border: solid;

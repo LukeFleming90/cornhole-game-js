@@ -33,6 +33,16 @@
             <li class="two-medium"><a href="#">Medium</a></li>
             <li class="two-hard"><a href="#">Hard</a></li>
         </ul>
+        <label for="instructions"><span>Instructions</span></label>               
+        <input type="checkbox" id="instructions"> 
+        <ul class="slide">
+            <li><a href="#">The game shall be played to the pre-determined number of twenty-one (21) points. The first player/team to reach, or exceed, that amount at the conclusion of a frame is the winner.</a></li> 
+            <li><a href="#">The approved method of scoring for the sport of cornhole is cancellation scoring. In cancellation scoring, the points of one player cancel out the points of their opponent. Using this method, only one player/team can score in each frame.</a></li>
+            <li><a href="#">Woody: Refers to any cornhole bag that has been pitched and remains on the cornhole board playing surface at the conclusion of the frame.</a></li>
+            <li><a href="#">Woody: Each woody is worth one (1) point</a></li>
+            <li><a href="#">Cornhole: Refers to any cornhole bag that has been pitched and passes through the cornhole board hole at any time within the frame.</a></li>
+            <li><a href="#">Cornhole: Each cornhole is worth three (3) points</a></li>
+        </ul>
     </div>
     <div class="start-game hidden">
         <div class="flex-parent board">
@@ -98,14 +108,14 @@
                         <div id="movingDiv"></div>
                     </div>
                     <div>
-                        <button id="clickableDiv">Throw</button>
+                        <button class="button-28" id="clickableDiv">Throw</button>
                     </div>
                 </div>
                 <div class="flex-child">
-                    <div class="player-buttons">
-                        <button class="button-28" role="button" id="one-point-shot">One Point Shot</button>
-                        <button class="button-28" role="button" id="three-point-shot">Three Point Shot</button>
-                        <button class="button-28" role="button" id="discard-bag">Discard Bag</button>
+                    <div class="player-buttons player-game-buttons">
+                        <button class="btn" role="button" id="one-point-shot">One Point Shot</button>
+                        <button class="btn-secondary" role="button" id="three-point-shot">Three Point Shot</button>
+                        <button class="btn-cancel" role="button" id="discard-bag">Discard Bag</button>
                     </div>
                     <div class="computer-buttons hidden">
                         <button class="button-28" role="button" id="computer-throw">Computer Throw</button>

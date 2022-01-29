@@ -298,6 +298,7 @@ span::after {
 
 #instructions:checked + .slide {
 	height: 500px;
+	text-align: left;
 }
 
 .grid-container {

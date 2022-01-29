@@ -1053,12 +1053,12 @@ resetButton.addEventListener('click', (evt) => {
         roundWinner = false;
     };
 
-    if(playerOneScore >= 21 && computerScore < 21) {
+    if(playerOneScore < 21 && computerScore >= 21) {
         window.alert(`Sorry ${playerOneGame.name}, you lost to The ${computerOneGame.name} by a score of ${playerOneScore} to ${computerScore}`);
         location.reload();
     };
 
-    if(playerOneScore < 21 && computerScore >= 21) {
+    if(playerOneScore >= 21 && computerScore < 21) {
         window.alert(`Congratulations ${playerOneGame.name}, you beat The ${computerOneGame.name} by a score of ${playerOneScore} to ${computerScore}`);
         location.reload();
     };

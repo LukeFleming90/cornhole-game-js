@@ -1,0 +1,583 @@
+body {
+    background-color: AntiqueWhite;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-container {
+	height: 200px;
+	position: relative;
+}
+  
+.button-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.main-title {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+	margin-top: 50px;
+	color: #000000;
+	font-family: 'Lato', sans-serif;
+	font-size: 54px;
+	font-weight: 300;
+	line-height: 58px;
+}
+
+.button-24 {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-24:hover, .button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.button-24:active {
+    opacity: .5;
+}
+
+.play-game {
+	background-color : #ededed;
+	font-family : "Open Sans", sans-serif;
+}
+
+.select-game {
+	padding: 40px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+li a {
+	text-decoration : none;
+	color : #2d2f31;
+}
+
+span {
+    padding : 30px;
+    background : #2d2f31; 
+    color : white;
+    font-size : 1.2em;
+    font-variant : small-caps;
+    cursor : pointer;
+    display: block;
+}
+
+span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slide {
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+.slide li {
+	padding : 30px;
+}
+
+#player-one {
+	position: absolute;
+	opacity: 0;
+	height: 0px;
+}    
+
+#player-one:checked + .slide {
+	height: 300px;
+} 
+
+#player-two {
+	position: absolute;
+	opacity: 0;
+	height: 0px;
+}    
+
+#player-two:checked + .slide {
+	height: 300px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 60px 60px 60px;
+	background-color: #2196F3;
+	padding: 5px;
+	margin-right: 1522px;
+}
+
+.grid-item {
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	background-color: #ff0000;
+	background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+	padding: 2px;
+	font-size: 30px;
+	text-align: center;
+}
+  
+.box1 {
+	grid-area: 3 / 2 / 5 / 3;
+}
+
+.button-28 {
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.button-28:disabled {
+    pointer-events: none;
+}
+
+.button-28:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Elements for Shooting Meter */
+
+.bar {
+	width:1000px;
+	height:50px;
+	border: solid;
+}
+
+.bar:after {
+	clear:both;
+}
+  
+.col-1-5-easy {
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: red;
+}
+  
+.col-2-5-easy {
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: yellow;
+}
+  
+.col-3-5-easy {
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: green;
+}
+  
+.col-4-5-easy {
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: yellow;
+}
+  
+.col-5-5-easy {
+    width: 20%;
+    height: 50px;
+    float: left;
+    background-color: red;
+}
+  
+.movingDivEasy {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	animation-name: moveDivEasy;
+	-webkit-animation-name: moveDivEasy;
+	animation-duration: 10s;
+	-webkit-animation-duration: 10s;
+	width:10px;
+	height: 50px;
+	background-color: black;
+}
+  
+@keyframes moveDivEasy {
+	  0% {
+		   transform: translate(0,0);
+	  }
+	  50% {
+		  transform: translate(990px, 0);
+	  }
+	  100% {
+		  transform: translate(0, 0);
+	  }
+}
+
+@-webkit-keyframes moveDivEasy {
+	  0% {
+		   transform: translate(0,0);
+	  }
+	  50% {
+		  transform: translate(990px, 0);
+	  }
+	  100% {
+		  transform: translate(0, 0);
+	  }
+}
+
+.col-1-5-medium {
+	width: 25%;
+	height: 50px;
+	float: left;
+	background-color: red;
+}
+	
+.col-2-5-medium {
+	width: 20%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+}
+	
+.col-3-5-medium {
+	width: 10%;
+	height: 50px;
+	float: left;
+	background-color: green;
+}
+
+.col-4-5-medium {
+	width: 20%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+}
+	
+.col-5-5-medium {
+	width: 25%;
+	height: 50px;
+	float: left;
+	background-color: red;
+}
+	
+.movingDivMedium {
+	  -webkit-animation-iteration-count: infinite;
+	  animation-iteration-count: infinite;
+	  animation-name: moveDivMedium;
+	  -webkit-animation-name: moveDivMedium;
+	  animation-duration: 8s;
+	  -webkit-animation-duration: 8s;
+	  width: 30px;
+	  height: 50px;
+	  background-color: black;
+}
+	
+@keyframes moveDivMedium {
+		0% {
+			 transform: translate(0,0);
+		}
+		50% {
+			transform: translate(970px, 0);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+}
+  
+@-webkit-keyframes moveDivMedium {
+		0% {
+			 transform: translate(0,0);
+		}
+		50% {
+			transform: translate(970px, 0);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+}
+
+.col-1-5-hard {
+	width: 30%;
+	height: 50px;
+	float: left;
+	background-color: red;
+}
+	
+.col-2-5-hard {
+	width: 16%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+}
+	
+.col-3-5-hard {
+	width: 8%;
+	height: 50px;
+	float: left;
+	background-color: green;
+}
+
+.col-4-5-hard {
+	width: 16%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+}
+	
+.col-5-5-hard {
+	width: 30%;
+	height: 50px;
+	float: left;
+	background-color: red;
+}
+	
+.movingDivHard {
+	  -webkit-animation-iteration-count: infinite;
+	  animation-iteration-count: infinite;
+	  animation-name: moveDivHard;
+	  -webkit-animation-name: moveDivHard;
+	  animation-duration: 4s;
+	  -webkit-animation-duration: 4s;
+	  width: 40px;
+	  height: 50px;
+	  background-color: black;
+}
+	
+@keyframes moveDivHard {
+		0% {
+			 transform: translate(0,0);
+		}
+		50% {
+			transform: translate(960px, 0);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+}
+  
+@-webkit-keyframes moveDivHard {
+		0% {
+			 transform: translate(0,0);
+		}
+		50% {
+			transform: translate(960px, 0);
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+}
+
+.flex-parent {
+	display:flex;
+}
+
+/* .flex-child {
+	flex:1;
+}
+
+.flex-child:nth-child(1) {
+	border-right:solid;
+} */
+
+.board {
+	border: solid black 10px;
+	height: 100vh;
+}
+ 
+.score-board {
+	flex:1;
+	display:flex;
+}
+
+.main {
+	flex:3;
+	display:flex;
+	border: solid orange 5px;
+	flex-direction:column;
+}
+
+/* .main > .flex-child {
+	border: solid;
+} */
+
+.main > .flex-child:nth-child(2) {
+	flex:4;
+}
+
+.main > .flex-child:nth-child(4) {
+    justify-content: center;
+    align-items: center;
+}
+
+.purple {
+	background-color: purple;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+/* #grid-item-1 {
+	background-color: purple;
+}
+
+.grid-item-2 {
+	background-color: none;
+}
+
+.grid-item-3 {
+	background-color: none;
+}
+
+.grid-item-4 {
+	background-color: purple;
+}
+
+.grid-item-5 {
+	background-color: none;
+}
+
+.grid-item-6 {
+	background-color: none;
+}
+
+.grid-item-7 {
+	background-color: purple;
+}
+
+.grid-item-8 {
+	background-color: none;
+}
+
+.grid-item-9 {
+	background-color: none;
+}
+
+.grid-item-10 {
+	background-color: purple;
+}
+
+.grid-item-11 {
+	background-color: none;
+}
+
+.grid-item-12 {
+	background-color: none;
+}
+
+.grid-item-13 {
+	background-color: none;
+}
+
+.grid-item-14 {
+	background-color: yellow;
+}
+
+.grid-item-15 {
+	background-color: none;
+}
+
+.grid-item-16 {
+	background-color: none;
+}
+
+.grid-item-17 {
+	background-color: yellow;
+}
+
+.grid-item-18 {
+	background-color: none;
+}
+
+.grid-item-19 {
+	background-color: none;
+}
+
+.grid-item-20 {
+	background-color: yellow;
+}
+
+.grid-item-21 {
+	background-color: none;
+}
+
+.grid-item-22 {
+	background-color: none;
+}
+
+.grid-item-23 {
+	background-color: none;
+}
+
+.grid-item-24 {
+	background-color: none;
+}
+
+.grid-item-25 {
+	background-color: none;
+}
+
+.grid-item-26 {
+	background-color: none;
+}
+
+.grid-item-27 {
+	background-color: none;
+}
+
+.grid-item-28 {
+	background-color: none;
+} */
